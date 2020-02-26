@@ -16,9 +16,9 @@ Route::get('/paridad/{numero?}', function ($numero = NULL) {
   return view('paridad', compact('numero'));
 });
 
-Route::get('/sumar/{numero1?}/{numero2?}/{numero3?}', function ($numero1 = 0 ,$numero2 = 0, $numero3= 0) {
+Route::get('/sumar/{numero1?}/{numero2?}/{numero3?}', function (int $numero1 = 0 ,int $numero2 = 0, int $numero3= 0) {
     $resultado = $numero1 + $numero2 + $numero3 ; 
-  return view('sumar', compact(['resultado' ]));
+  return view('sumar', compact('numero1', 'numero2', 'numero3' , 'resultado'));
   });
   
 

@@ -12,12 +12,18 @@
 <body>
     <div class="main">
         <p>
-            @php
-            
-            
-            echo $resultado;
-                //echo $numero1.' + '.$numero2.' + '.$numero3.' = '.($numero1+$numero2+$numero3);
-            @endphp
+            @if ($numero1)
+                {{ $numero1}} + 
+            @endif
+            @if ($numero2)
+                {{ $numero2}} + 
+            @endif
+            @if ($numero3)
+                {{ $numero3}} <?="hola como andas"?>
+            @endif
+        </p>
+        <p>
+            El resultado es {{ $resultado }} 
         </p>
     </div>
 </body>
