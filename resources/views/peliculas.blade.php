@@ -1,30 +1,24 @@
+@extends ("layouts.default")
 
-</html>
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>peliculas</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+@section("title")
+peliculas
+@endsection
 
-</head>
-<?php
-//$movies = ["Hulk" , "Tomb Raider" , "Assassin's Creed" , "Doom"]; 
+    <?php
 
-$movies = array("Hulk" => 6 , "Tomb Raider" => 7, "Assassin's Creed" => 8 , "Doom" => 9);
+    $movies  = array(array("Hulk" , 6), array("Tomb Raider", 7) , array("Assassin's Creed", 8), array("Doom" , 9));
  
- ?>
-<body>
-    <div class="main">
-        <h1>Hola! Estas son las peliculas!</h1>
-        <ul>
-            @foreach ($movies as $key => $rating)
-            <li><a href="">{{$key}} - - - {{$rating}} @unless($rating < 8) Recomendada! @endunless</a></li>
+    ?>
+
+@section("body")
+
+<div>
+    <h1>Estas son las peliculas</h1>
+         <ul>       
+            @foreach ($movies as $movie)
+            <li><a href="">{{$movie[0]}} - - - {{$movie[1]}} @unless($movie[1] < 8) Recomendada! @endunless</a></li>
             @endforeach  
-          
-        </ul>
-    </div>
-</body>
-</html>
+        </ul>  
+</div>
+
+@endsection  
