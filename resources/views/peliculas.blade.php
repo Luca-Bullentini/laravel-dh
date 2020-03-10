@@ -4,6 +4,7 @@
 peliculas
 @endsection
 
+
     <?php
 
     $movies  = array(array("Hulk" , 6), array("Tomb Raider", 7) , array("Assassin's Creed", 8), array("Doom" , 9));
