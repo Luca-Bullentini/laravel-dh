@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,21 +13,14 @@
 |
 */
 
-
-Route::get('/paridad/{numero?}', function ($numero = NULL) {
-  return view('paridad', compact('numero'));
-});
-
-Route::get('/sumar/{numero1?}/{numero2?}/{numero3?}', function (int $numero1 = 0 ,int $numero2 = 0, int $numero3= 0) {
-    $resultado = $numero1 + $numero2 + $numero3 ; 
-  return view('sumar', compact('numero1', 'numero2', 'numero3' , 'resultado'));
-  });
-  
-
-Route::get('inicio', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('peliculas', function () {
-    return view('peliculas');
+    return view('peliculas' );
+});
+
+Route::get('peliculas/{id}', function ($id) {
+    return view('detallePeliculas', compact("id"));
 });
