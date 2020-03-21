@@ -10,8 +10,21 @@ class ActorController extends Controller
 {
     //
     public function directory(){
+
         $actores = actor::all();
         return view('actores' , compact('actores'));
+    }
+
+    public function search(){
+        
+        $actores = actor::where('first_name', 'like' , '%' . $_GET['buscar'] . '%' )
+                            ->orWhere('last_name', 'like' , '%' . $_GET['buscar'] . '%'  )
+                            
+                            ->orderBy('last_name')
+                            ->get();
+        //dd($actores , $_GET['buscar']);
+                            
+        return view('actores', compact('actores'));
     }
 
     public function index()
@@ -49,6 +62,8 @@ class ActorController extends Controller
     public function show($id)
     {
         //
+        $actor = actor::find($id);
+        return view('actor', compact('actor'));
     }
 
     /**

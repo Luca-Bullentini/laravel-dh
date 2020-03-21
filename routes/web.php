@@ -26,3 +26,7 @@ Route::get('peliculas/{id}', function ($id) {
 });
 
 Route::get('/actores', 'ActorController@directory' );
+
+Route::get('/actores/buscar', 'ActorController@search' );
+
+Route::get('/actores/{id}', 'ActorController@show' );
