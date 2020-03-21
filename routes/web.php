@@ -24,3 +24,5 @@ Route::get('peliculas', function () {
 Route::get('peliculas/{id}', function ($id) {
     return view('detallePeliculas', compact("id"));
 });
+
+Route::get('/actores', 'ActorController@directory' );
