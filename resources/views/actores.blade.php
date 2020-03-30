@@ -21,7 +21,7 @@ Actores
 <ul>
     @if (isset($actores))
     @foreach($actores as $actor)
-    <li> <a href="actores/{{$actor['id']}}"> {{$actor->first_name}} {{$actor->last_name}} </a></li>
+    <li> <a href="../actores/{{$actor['id']}}"> {{$actor->first_name}} {{$actor->last_name}} </a></li>
     @endforeach
     @endif
 </ul>
