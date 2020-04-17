@@ -21,11 +21,16 @@ Route::get('/sumar/{numero1?}/{numero2?}/{numero3?}', function (int $numero1 = 0
   return view('sumar', compact('numero1', 'numero2', 'numero3' , 'resultado'));
   });
   
-
-Route::get('inicio', function () {
-    return view('welcome');
-});
-
-Route::get('peliculas', function () {
-    return view('peliculas');
+  
+  Route::get('/', function () {
+      return view('welcome');
+  });
+  
+  Route::get('inicio', function () {
+      return view('welcome');
+  });
+  
+Route::get('peliculas/{peli1?}/{peli2?}', function ($peli1, $peli2) {
+$vac=compact('peli1' , 'peli2');
+    return view('peliculas', $vac);
 });
