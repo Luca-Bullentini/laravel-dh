@@ -4,9 +4,28 @@
 peliculas
 @endsection
 
+<<<<<<< HEAD
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+=======
+>>>>>>> 2f6f1509e2291faf73d82d6080c70e3c269b2a8a
 
     <?php
 
+<<<<<<< HEAD
+<body>
+    <div class="main">
+        <h1>Hola estas son las pelis </h1>
+        <ul>
+            <li>peli1</li>
+            <li>peli2</li>
+            <li>peli3</li>
+            <li>peli4</li>
+        </ul>
+    </div>
+</body>
+</html>
+=======
     $movies  = array(array("Hulk" , 6), array("Tomb Raider", 7) , array("Assassin's Creed", 8), array("Doom" , 9));
  
     ?>
@@ -23,3 +42,4 @@ peliculas
 </div>
 
 @endsection  
+>>>>>>> 2f6f1509e2291faf73d82d6080c70e3c269b2a8a
