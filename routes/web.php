@@ -30,3 +30,18 @@ Route::get('/actores', 'ActorController@directory' );
 Route::get('/actores/buscar', 'ActorController@search' );
 
 Route::get('/actores/{id}', 'ActorController@show' );
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
